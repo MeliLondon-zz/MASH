@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.5, maximum-scale=0.5, minimal-ui">
+
+  <title>Future happiness MASH</title>
+  <link href="normalize.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <h1 class="logo"><img src="img/mash-logo.svg" /></h1>
+  <p class="description">Answer the below and discover your path to happiness.</p>
+
+<form action="" method="post" id="mash">
+
+  <div id="answers" class="hide">
+      <p>Living in <span id="location"></span> with a <span id="pet"></span> and doing <span id="hobby"></span> will bring the most happiness to your life.</p>
+  </div>
+
+  <div class="bucket">
+  
+    <div class="choice-bucket">
+      <h4 class="highlight">Where would you like to live?</h4>
+        <input name="location[]" type="text">
+        <input name="location[]" type="text">
+        <input name="location[]" type="text">
+        <input name="location[]" type="text">
+      </div>
+      
+      <div class="choice-bucket">
+        <h4 class="highlight">What makes you happy?</h4>
+          <input name="hobby[]" type="text">
+          <input name="hobby[]" type="text">
+          <input name="hobby[]" type="text">
+          <input name="hobby[]" type="text">
+      </div>
+      
+     <div class="choice-bucket">
+        <h4 class="highlight">What pet would you like to have?</h4>
+          <input name="pet[]" type="text">
+          <input name="pet[]" type="text">
+          <input name="pet[]" type="text">
+          <input name="pet[]" type="text">
+      </div>
+
+  </div>
+
+  <input type="submit" value="Show me the path">
+</form>
+<script src=""></script>
+</body>
+</html>
