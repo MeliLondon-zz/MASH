@@ -6,7 +6,7 @@ function random_number(num) {  // New function called random_choice that takes o
 
 function mash_choice() {  // New function called mash_choice that doesn't take any parameters 
     // Since MASH is a special case, give it its own list
-    var mash = ['mansion', 'apartment', 'shack', 'house'];  // The array of choices to pick from 
+    var mash = ['flyboat', 'apartment', 'cabin', 'house'];  // The array of choices to pick from 
     var randomNum = random_number(4);  // Use the above function to get a number between 0 and 4
     return mash[randomNum];  // Return the list item the random number function just picked and exit the function 
 }
@@ -30,17 +30,17 @@ function get_answer(category) {
 function fill_in_answers(answers) {
     // Find the spans that need filled
     var home = document.querySelector('#home');  // This says make a new variable and find the HTML tag that has the ID of "home" 
-    var profession = document.querySelector('#profession');
+    var hobby = document.querySelector('#hobby');
     var pet = document.querySelector('#pet');
     var location = document.querySelector('#location');
 
     // Fill them with the provided answers
     home.innerText = answers['mash'];
-    profession.innerText = answers['profession'];
+    hobby.innerText = answers['hobby'];
     pet.innerText = answers['pet'];
     location.innerText = answers['location'];
     home.innerHTML = answers.mash;  // Change the content of the element in the HTML doc with the id "home" to the "mash" value in answers 
-    profession.innerHTML = answers.profession;  // Change the content of the element in the HTML doc with the id "career" to the "career" value in answers 
+    hobby.innerHTML = answers.hobby;  // Change the content of the element in the HTML doc with the id "career" to the "career" value in answers 
     pet.innerHTML = answers.pet;
     location.innerHTML = answers.location;
 }
@@ -52,7 +52,7 @@ function handle_submission(evt) {
     // Build up our answers object
     var answers = {
         'mash': mash_choice(),
-        'profession': get_answer('profession'),
+        'hobby': get_answer('hobby'),
         'pet': get_answer('pet'),
         'location': get_answer('location')
     }
