@@ -1,13 +1,13 @@
 function random_number(num) {  // New function called random_choice that takes one parameter, num (or a number)
     // Get a random number between 0 and a passed-in number
-    var num = num || 4  // If no number passed in, default to 4
+    var num = num || 5  // If no number passed in, default to 5
     return Math.floor(Math.random() * num); // Round the answer down (floor) of a random number between 0 and 1 and multiply it by a number. Then return a value and exit the function.
 }
 
 function mash_choice() {  // New function called mash_choice that doesn't take any parameters 
     // Since MASH is a special case, give it its own list
-    var mash = ['flyboat', 'apartment', 'cabin', 'house'];  // The array of choices to pick from 
-    var randomNum = random_number(4);  // Use the above function to get a number between 0 and 4
+    var mash = ['flyboat', 'apartment', 'cabin', 'house', 'loft'];  // The array of choices to pick from 
+    var randomNum = random_number(5);  // Use the above function to get a number between 0 and 4
     return mash[randomNum];  // Return the list item the random number function just picked and exit the function 
 }
 
